@@ -1,6 +1,7 @@
 <template>
   <div class="user_teams_new">
     <h1>Enter your team name</h1>
+    <p>Fantasy Team Name: <input v-model="newUserTeam" type="text"></p>
     <button v-on:click="addUserTeam()">Add Team</button>
    
   </div>
@@ -14,7 +15,8 @@ import axios from "axios";
 export default {
   data: function () {
     return {
-      teamName: "",
+      user_teams: [],
+      newUserTeam: "",
       errors: [],
     };
   },
@@ -22,7 +24,7 @@ export default {
     addUserTeam: function () {
       console.log("adding team");
       var params = {
-        user_team_name: "Jeff's Team",
+        user_team_name: this.newUserTeam,
       };
 
       console.log(params);
