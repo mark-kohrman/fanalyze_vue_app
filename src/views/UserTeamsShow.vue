@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     <h1>{{ user_team.user_team_name }}'s Team</h1>
+    <grid :cols="cols" :rows"rows"></grid>
     <p> {{ user_team.qb  }} </p>
     <p> {{ user_team.rb1 }} </p>
     <p> {{ user_team.rb2  }} </p>
@@ -19,14 +20,20 @@
 
 <script>
 import axios from "axios";
+import Grid from "gridjs-vue";
 
 export default {
+  name: "UserTeams",
+  components: {
+    Grid,
+  },
   data: function () {
     return {
       message: "Welcome to the show page! This your team",
       user_team: {},
     };
   },
+
   created: function () {
     this.showUserTeam();
   },
