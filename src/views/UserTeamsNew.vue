@@ -1,8 +1,9 @@
 <template>
   <div class="user_teams_new">
     <h1>Enter your team name</h1>
-    <p>Fantasy Team Name: <input v-model="newUserTeam" type="text"></p>
+    <p>Team Name: <input v-model="newUserTeam" type="text"></p>
     <button v-on:click="addUserTeam()">Add Team</button>
+
     
    
   </div>
