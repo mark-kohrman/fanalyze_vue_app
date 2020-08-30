@@ -2,6 +2,16 @@
   <div class="user_teams_new">
     <h1>Enter your team name</h1>
     <p>Team Name: <input v-model="newUserTeam" type="text"></p>
+    <p>QB: <input v-model="qbPlayerId" type="text"></p>
+    <p>RB: <input v-model="rb1PlayerId" type="text"></p>
+    <p>RB: <input v-model="rb2PlayerId" type="text"></p>
+    <p>WR: <input v-model="wr1PlayerId" type="text"></p>
+    <p>WR: <input v-model="wr2PlayerId" type="text"></p>
+    <p>Flex: <input v-model="flexPlayerId" type="text"></p>
+    <p>TE: <input v-model="tePlayerId" type="text"></p>
+    <p>K: <input v-model="kPlayerId" type="text"></p>
+
+
     <button v-on:click="addUserTeam()">Add Team</button>
 
     
@@ -19,6 +29,14 @@ export default {
     return {
       user_teams: [],
       newUserTeam: "",
+      qbPlayerId: "",
+      rb1PlayerId: "",
+      rb2PlayerId: "",
+      wr1PlayerId: "",
+      wr2PlayerId: "",
+      flexPlayerId: "",
+      tePlayerId: "",
+      kPlayerId: "",
       errors: [],
     };
   },
@@ -27,6 +45,14 @@ export default {
       console.log("adding team");
       var params = {
         user_team_name: this.newUserTeam,
+        qb_player_id: this.qbPlayerId,
+        rb1_player_id: this.rb1PlayerId,
+        rb2_player_id: this.rb2PlayerId,
+        wr1_player_id: this.wr1PlayerId,
+        wr2_player_id: this.wr2PlayerId,
+        flex_player_id: this.flexPlayerId,
+        te_player_id: this.tePlayerId,
+        kicker_player_id: this.kPlayerId,
       };
 
       console.log(params);

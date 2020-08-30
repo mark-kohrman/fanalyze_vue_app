@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Signup from '../views/Signup.vue'
 import UserTeamsNew from '../views/UserTeamsNew.vue'
+import UserTeamsShow from '../views/UserTeamsShow.vue'
 import Login from '../views/Login.vue'
 import Logout from '../views/Logout.vue'
 
@@ -26,6 +27,11 @@ const routes = [
     path: '/user_teams/new',
     name: 'UserTeamsNew',
     component: UserTeamsNew
+  },
+  {
+    path: '/user_teams/:id',
+    name: 'UserTeamsShow',
+    component: UserTeamsShow
   },
   {
     path: '/login',
