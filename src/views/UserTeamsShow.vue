@@ -1,7 +1,9 @@
 <template>
   <div class="home">
-    <h1>{{ user_team.user_team_name }}'s Team</h1>
-    <grid :cols="cols" :rows"rows"></grid>
+
+    <h1> {{ user_team.user_team_name }}'s Team</h1>
+    <grid :cols="cols" :rows="rows"></grid>
+
     <p> {{ user_team.qb  }} </p>
     <p> {{ user_team.rb1 }} </p>
     <p> {{ user_team.rb2  }} </p>
@@ -30,6 +32,11 @@ export default {
   data: function () {
     return {
       message: "Welcome to the show page! This your team",
+      cols: ["Name", "Position", "Team", "Proj", "Weather Proj", "Total Proj"],
+      rows: [
+        ["Tom Brady", "QB", "TB", "15", "2", "17"],
+        ["joe", "RB", "CHI", "32", "2", "33"],
+      ],
       user_team: {},
     };
   },
