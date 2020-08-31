@@ -23,6 +23,7 @@
 </style>
 
 <script>
+import Vue2Filters from "vue2-filters";
 import axios from "axios";
 export default {
   data: function () {
@@ -67,5 +68,6 @@ export default {
         });
     },
   },
+  mixins: [Vue2Filters.mixin],
 };
 </script>
