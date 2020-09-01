@@ -1,7 +1,10 @@
 <template>
   <div class="home">
     <h1>{{ message }}</h1>
-    <p>{{  user_teams  }}</p>
+    <div v-for="user_team in user_teams">
+    <p>{{  user_team.user_team_name  }}</p>
+    </div>
+
   </div>
 </template>
 
