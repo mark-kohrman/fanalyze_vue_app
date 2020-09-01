@@ -1,8 +1,10 @@
 <template>
   <div class="home">
     <h1>{{ message }}</h1>
+    <h2>Your Teams:</h2>
     <div v-for="user_team in user_teams">
-    <h3>id: {{user_team.id }} | name:{{  user_team.user_team_name }}</h3>
+    <h2> <a v-bind:href="`/user_teams/${user_team.id}`"> {{ user_team.user_team_name }} </a> </h2>
+
     </div>
 
   </div>
@@ -17,7 +19,7 @@ import axios from "axios";
 export default {
   data: function () {
     return {
-      message: "This is the index page where you can view all of your TEAMS!!!",
+      message: "Click on your team to get started and view projections by player!",
       user_teams: [],
     };
   },
