@@ -1,6 +1,6 @@
 <template>
   <div class="user_teams_new">
-    <h1>Enter your team name</h1>
+    <h1>Enter your team name and players</h1>
     <p>Team Name: <input v-model="newUserTeam" type="text"></p>
     <p>QB: <input v-model="qbPlayerId" type="text"></p>
     <p>RB: <input v-model="rb1PlayerId" type="text"></p>
@@ -14,6 +14,8 @@
 
 
     <button v-on:click="addUserTeam()">Add Team</button>
+
+
 
     
    
@@ -31,15 +33,15 @@ export default {
     return {
       user_teams: [],
       players: [],
-      newUserTeam: "1",
-      qbPlayerId: "2",
-      rb1PlayerId: "3",
-      rb2PlayerId: "4",
-      wr1PlayerId: "5",
-      wr2PlayerId: "6",
-      flexPlayerId: "7",
-      tePlayerId: "8",
-      kPlayerId: "9",
+      newUserTeam: "",
+      qbPlayerId: "",
+      rb1PlayerId: "34",
+      rb2PlayerId: "37",
+      wr1PlayerId: "93",
+      wr2PlayerId: "799",
+      flexPlayerId: "761",
+      tePlayerId: "314",
+      kPlayerId: "32",
       errors: [],
     };
   },
@@ -68,12 +70,6 @@ export default {
         .catch((error) => {
           this.errors = error.response.data.errors;
         });
-    },
-    getPlayerName: function () {
-      console.log("getting player name!!!!");
-      axios.get("/api/players").then((response) => {
-        console.log(response.data);
-      });
     },
   },
   mixins: [Vue2Filters.mixin],

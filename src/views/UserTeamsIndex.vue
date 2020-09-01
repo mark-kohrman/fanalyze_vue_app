@@ -2,7 +2,7 @@
   <div class="home">
     <h1>{{ message }}</h1>
     <div v-for="user_team in user_teams">
-    <p>{{  user_team.user_team_name  }}</p>
+    <h3>id: {{user_team.id }} | name:{{  user_team.user_team_name }}</h3>
     </div>
 
   </div>
