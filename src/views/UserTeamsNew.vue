@@ -10,6 +10,7 @@
     <p>Flex: <input v-model="flexPlayerId" type="text"></p>
     <p>TE: <input v-model="tePlayerId" type="text"></p>
     <p>K: <input v-model="kPlayerId" type="text"></p>
+  
 
 
     <button v-on:click="addUserTeam()">Add Team</button>
@@ -29,15 +30,16 @@ export default {
   data: function () {
     return {
       user_teams: [],
-      newUserTeam: "",
-      qbPlayerId: "",
-      rb1PlayerId: "",
-      rb2PlayerId: "",
-      wr1PlayerId: "",
-      wr2PlayerId: "",
-      flexPlayerId: "",
-      tePlayerId: "",
-      kPlayerId: "",
+      players: [],
+      newUserTeam: "1",
+      qbPlayerId: "2",
+      rb1PlayerId: "3",
+      rb2PlayerId: "4",
+      wr1PlayerId: "5",
+      wr2PlayerId: "6",
+      flexPlayerId: "7",
+      tePlayerId: "8",
+      kPlayerId: "9",
       errors: [],
     };
   },
@@ -66,6 +68,12 @@ export default {
         .catch((error) => {
           this.errors = error.response.data.errors;
         });
+    },
+    getPlayerName: function () {
+      console.log("getting player name!!!!");
+      axios.get("/api/players").then((response) => {
+        console.log(response.data);
+      });
     },
   },
   mixins: [Vue2Filters.mixin],

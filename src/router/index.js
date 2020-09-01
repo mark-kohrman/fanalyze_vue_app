@@ -2,6 +2,7 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
 import Signup from '../views/Signup.vue';
+import UserTeamsIndex from '../views/UserTeamsIndex.vue';
 import UserTeamsNew from '../views/UserTeamsNew.vue';
 import UserTeamsShow from '../views/UserTeamsShow.vue';
 import Login from '../views/Login.vue';
@@ -24,6 +25,11 @@ const routes = [
     component: Signup
   },
   {
+    path: '/user_teams',
+    name: 'UserTeamsIndex',
+    component: UserTeamsIndex
+  },
+  {
     path: '/user_teams/new',
     name: 'UserTeamsNew',
     component: UserTeamsNew
@@ -40,7 +46,7 @@ const routes = [
   },
   {
     path: '/logout',
-    name: 'Logout',
+    name: 'logout',
     component: Logout
   },
   {

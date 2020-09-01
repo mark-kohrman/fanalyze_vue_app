@@ -3,7 +3,7 @@ import App from "./App.vue";
 import router from "./router";
 import axios from "axios";
 import Grid from 'gridjs-vue';
-import Vue2Filters from 'vue2-filters'
+import Vue2Filters from 'vue2-filters';
 
 
 
@@ -17,7 +17,7 @@ if (jwt) {
 Vue.config.productionTip = false;
 
 Vue.use(Grid);
-Vue.use(Vue2Filters)
+Vue.use(Vue2Filters);
 
 new Vue({
   router,

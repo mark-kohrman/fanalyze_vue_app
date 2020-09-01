@@ -1,7 +1,6 @@
 <template>
   <div class="home">
     <h1>{{ message }}</h1>
-    <h1>{{ name  }}</h1>
   </div>
 </template>
 
@@ -14,8 +13,7 @@ import axios from "axios";
 export default {
   data: function () {
     return {
-      message: "Fanalyze your Team!",
-      name: "My name is mark",
+      message: "Welcome to Fanalyze, click create team on the top right to get started!",
     };
   },
   created: function () {},
