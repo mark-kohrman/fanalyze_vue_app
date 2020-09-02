@@ -80,6 +80,8 @@
   </tr>
 </table>
 
+    <p> <a v-bind:href="`/user_teams`"> Go back to My Teams </a> </p>
+
   
 
 
