@@ -7,6 +7,8 @@ import UserTeamsNew from '../views/UserTeamsNew.vue';
 import UserTeamsShow from '../views/UserTeamsShow.vue';
 import Login from '../views/Login.vue';
 import Logout from '../views/Logout.vue';
+import UserTeamsEdit from '../views/UserTeamsEdit.vue';
+
 
 
 
@@ -38,6 +40,11 @@ const routes = [
     path: '/user_teams/:id',
     name: 'UserTeamsShow',
     component: UserTeamsShow
+  },
+  {
+    path: '/user_teams/:id/edit',
+    name: 'UserTeamsEdit',
+    component: UserTeamsEdit
   },
   {
     path: '/login',

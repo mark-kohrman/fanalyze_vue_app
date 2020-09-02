@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <h1>{{ message }}</h1>
-    <h2>Your Teams:</h2>
+    <h2>Teams:</h2>
     <div v-for="user_team in user_teams">
     <h2> <a v-bind:href="`/user_teams/${user_team.id}`"> {{ user_team.user_team_name }} </a> </h2>
 

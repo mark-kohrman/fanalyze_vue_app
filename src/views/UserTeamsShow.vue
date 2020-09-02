@@ -10,7 +10,7 @@
     <th>Team</th>
     <th>Projection</th>
     <th>Weather Proj</th>
-    <th>TOTAL PROJECTION</th>
+    <th>Total Proj</th>
 
 
   </tr>
@@ -80,6 +80,7 @@
   </tr>
 </table>
 
+    <p> <a v-bind:href="`/user_teams/${this.$route.params.id}/edit`"> Edit my team </a> </p>
     <p> <a v-bind:href="`/user_teams`"> Go back to My Teams </a> </p>
 
   
