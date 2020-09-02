@@ -83,6 +83,9 @@
     <p> <a v-bind:href="`/user_teams/${this.$route.params.id}/edit`"> Edit my team </a> </p>
     <p> <a v-bind:href="`/user_teams`"> Go back to My Teams </a> </p>
 
+    <p><button v-on:click="deleteUserTeam()"> Delete this team </button> </p>
+
+
   
 
 
@@ -115,6 +118,13 @@ export default {
       axios.get("/api/user_teams/" + this.$route.params.id).then((response) => {
         console.log(response.data);
         this.user_team = response.data;
+      });
+    },
+    deleteUserTeam: function () {
+      console.log("deleting the team!!!!");
+      axios.delete(`api/user_teams/${this.$route.params.id}`).then((response) => {
+        console.log(response.data);
+        this.$router.push("/user_teams");
       });
     },
   },
