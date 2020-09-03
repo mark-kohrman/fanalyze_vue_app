@@ -102,15 +102,9 @@ import axios from "axios";
 import Grid from "gridjs-vue";
 
 export default {
-  name: "UserTeams",
-  components: {
-    Grid,
-  },
-
   data: function () {
     return {
       user_team: {},
-      cols: ["Name", "Position", "Team", "Projection", "Weather Proj", "Total Proj"],
     };
   },
 
