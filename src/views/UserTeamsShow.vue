@@ -1,9 +1,12 @@
 <template>
   <div class="home">
 
-    <h1> {{ user_team.user_team_name }}'s Team</h1>
+    <h1>Team: {{ user_team.user_team_name }}</h1>
+    <grid :cols="cols" :user_team="rows"></grid>
 
     <table style="width:100%">
+
+
   <tr>
     <th>Name</th>
     <th>Position</th>
@@ -101,9 +104,14 @@ import Grid from "gridjs-vue";
 
 export default {
   name: "UserTeams",
+  components: {
+    Grid,
+  },
+
   data: function () {
     return {
       user_team: {},
+      cols: ["Name", "Position", "Team", "Projection", "Weather Proj", "Total Proj"],
     };
   },
 
