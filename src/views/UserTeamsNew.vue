@@ -1,5 +1,6 @@
 <template>
   <div class="user_teams_new">
+    
     <h1>Enter your team name and players</h1>
     <p>Team Name: <input v-model="newUserTeam" type="text"></p>
     <p>QB: <input v-model="qbPlayerId" type="text"></p>

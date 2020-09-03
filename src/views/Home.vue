@@ -13,7 +13,7 @@ import axios from "axios";
 export default {
   data: function () {
     return {
-      message: "Welcome to Fanalyze,sign up, login and click create team on the top right to get started!",
+      message: "Welcome to Fanalyze, sign up to create a team and get started!",
     };
   },
   created: function () {},
