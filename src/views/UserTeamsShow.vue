@@ -15,7 +15,6 @@
     <th>Weather Proj</th>
     <th>Total Proj</th>
 
-
   </tr>
   <tr>
     <td>{{ user_team.qb.player_name  }}</td>
