@@ -1,10 +1,13 @@
 <template>
-  <div class="user_teams_new">
+  <div class="user-teams-new">
     <form v-on:submit.prevent="submit()">
 
       <h1> Edit your team </h1>
-      <h1> {{ user_team.user_team_name }} </h1>
-  
+      <h1> {{ user_team }} </h1>
+       <ul>
+        <li class="text-danger" v-for="error in errors">{{ error }}</li>
+      </ul>
+
       <div class="form-group">
         <label> QB: </label>
         <input type="text" class="form-control" v-model="user_team.qb_player_id">
@@ -54,7 +57,6 @@
 </style>
 
 <script>
-import Vue2Filters from "vue2-filters";
 import axios from "axios";
 export default {
   data: function () {
@@ -64,10 +66,21 @@ export default {
     };
   },
   methods: {
+    showUserTeam: function () {
+      console.log("showing the team!!!");
+      console.log(this.$route);
+
+      axios.get(`/api/user_teams/${this.$route.params.id}`).then((response) => {
+        console.log(response.data);
+        this.user_team = response.data;
+      });
+    },
+    created: function () {
+      console.log("show me the team please!!!");
+      this.showUserTeam();
+    },
     submit: function () {
-      console.log("editing team");
       var params = {
-        user_team_name: this.user_team.user_team_name,
         qb_player_id: this.user_team.qb_player_id,
         rb1_player_id: this.user_team.rb1_player_id,
         rb2_player_id: this.user_team.rb2_player_id,
@@ -86,21 +99,9 @@ export default {
           this.$router.push(`/user_teams/${this.$route.params.id}`);
         })
         .catch((error) => {
-          this.error = error.response.data.errors;
+          this.errors = error.response.data.errors;
         });
     },
-    showUserTeam: function () {
-      console.log("showing the team!!!");
-      console.log(this.$route);
-
-      axios.get(`/api/user_teams/${this.$route.params.id}`).then((response) => {
-        console.log(response.data);
-      });
-    },
-    created: function () {
-      this.showUserTeam();
-    },
   },
-  mixins: [Vue2Filters.mixin],
 };
 </script>
