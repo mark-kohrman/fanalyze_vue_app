@@ -5,26 +5,25 @@
   <div class="login">
     <div class="container">
 
-  <form v-on:submit.prevent="submit()">
+      <form v-on:submit.prevent="submit()">
 
     
-    <h1>Login</h1>
-    <ul>
-      <li class="text-danger" v-for="error in errors">{{  error  }}</li>
-    </ul>
+      <h1>Login</h1>
+        <ul>
+          <li class="text-danger" v-for="error in errors">{{  error  }}</li>
+        </ul>
 
-    <div class="form-group">
-      <input type="email" class="form-control" placeholder="Email Address" id="email" required data-validation-required-message="Please enter your email address." v-model="email">
-    </div>
-    <div>
-      <input type="password" class="form-control" placeholder="Password" id="email" required data-validation-required-message="Please enter your password." v-model="password">
-    </div>
+        <div class="form-group">
+          <input type="email" class="form-control" placeholder="Email Address" id="email" required data-validation-required-message="Please enter your email address." v-model="email">
+        </div>
+        <div>
+          <input type="password" class="form-control" placeholder="Password" id="password" required data-validation-required-message="Please enter your password." v-model="password">
+        </div>
 
-    <input type="submit" class="btn btn-primary" value="Submit">
-    </form>
-  </div>
-  
-    </div>  
+        <input type="submit" class="btn btn-primary" value="Submit">
+        </form>
+    </div>
+  </div>  
 </template>
 
 <style>
