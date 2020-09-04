@@ -1,7 +1,7 @@
 <template>
   <div class="home">
 
-    <h1>Team: {{ user_team.user_team_name }}</h1>
+    <h1>{{ user_team.user_team_name }}</h1>
 
     <table style="width:100%">
 
@@ -84,11 +84,7 @@
     <p> <a v-bind:href="`/user_teams/${this.$route.params.id}/edit`"> Edit my team </a> </p>
     <p> <a v-bind:href="`/user_teams`"> Go back to My Teams </a> </p>
 
-    <p><button v-on:click="deleteUserTeam()"> Delete this team </button> </p>
-
-
-  
-
+    <button class="btn btn-primary" id="sendMessageButton" v-on:click="deleteUserTeam()">Delete Team</button>
 
   </div>
 </template>
