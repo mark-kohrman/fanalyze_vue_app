@@ -1,5 +1,6 @@
 <template>
   <div class="user_teams_new">
+    <div class="container">
       <form v-on:submit.prevent="submit()">
         
           <div class="control-group">
@@ -69,6 +70,7 @@
           <div id="success"></div>
           <button class="btn btn-primary" id="sendMessageButton" v-on:click="addUserTeam">Create Team</button>
         </form> 
+    </div>
   </div>
 </template>
 
