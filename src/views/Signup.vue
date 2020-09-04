@@ -13,11 +13,11 @@
         <div class="form-group">
           <input type="email" class="form-control" placeholder="Email Address" id="email" required data-validation-required-message="Please enter your email address." v-model="email">
         </div>
-        <div>
+        <div class="form-group">
           <input type="password" class="form-control" placeholder="Password" id="password" required data-validation-required-message="Please enter your password." v-model="password">
         </div>
-        <br>
-         <div>
+
+        <div class="form-group">
           <input type="password" class="form-control" placeholder="Password Confirmation" id="passwordConfirmation" required data-validation-required-message="Please enter your password." v-model="passwordConfirmation">
         </div>
 
