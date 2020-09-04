@@ -2,7 +2,6 @@
   <div class="home">
 
     <h1>Team: {{ user_team.user_team_name }}</h1>
-    <grid :cols="cols" :user_team="rows"></grid>
 
     <table style="width:100%">
 
@@ -99,7 +98,6 @@
 
 <script>
 import axios from "axios";
-import Grid from "gridjs-vue";
 
 export default {
   data: function () {

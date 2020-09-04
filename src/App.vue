@@ -14,13 +14,16 @@
             <a class="nav-link" href="/">Home</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="/user_teams">My Teams</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="/about">About</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/user_teams/new">Create New Team</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/user_teams">My Teams</a>
+            <a class="nav-link" href="/signup">Signup</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/login">Login</a>
@@ -34,7 +37,7 @@
   </nav>
 
   <!-- Page Header -->
-  <header class="masthead" style="background-image: url('img/field2.jpg')">
+  <header class="masthead" style="background-image: url('/img/field2.jpg')">
     <div class="overlay"></div>
     <div class="container">
       <div class="row">

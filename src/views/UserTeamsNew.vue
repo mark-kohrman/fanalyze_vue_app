@@ -1,25 +1,74 @@
 <template>
   <div class="user_teams_new">
-    
-    <h1>Enter your team name and players</h1>
-    <p>Team Name: <input v-model="newUserTeam" type="text"></p>
-    <p>QB: <input v-model="qbPlayerId" type="text"></p>
-    <p>RB: <input v-model="rb1PlayerId" type="text"></p>
-    <p>RB: <input v-model="rb2PlayerId" type="text"></p>
-    <p>WR: <input v-model="wr1PlayerId" type="text"></p>
-    <p>WR: <input v-model="wr2PlayerId" type="text"></p>
-    <p>Flex: <input v-model="flexPlayerId" type="text"></p>
-    <p>TE: <input v-model="tePlayerId" type="text"></p>
-    <p>K: <input v-model="kPlayerId" type="text"></p>
-  
-
-
-    <button v-on:click="addUserTeam()">Add Team</button>
-
-
-
-    
-   
+      <form v-on:submit.prevent="submit()">
+        
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label>Team Name</label>
+              <input v-model="newUserTeam" type="text" class="form-control" placeholder="Team Name" id="team name" required data-validation-required-message="Please enter your team name.">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label>QB</label>
+              <input v-model="qbPlayerId" type="text" class="form-control" placeholder="QB" id="qb" required data-validation-required-message="Please enter your team's quarterback.">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="form-group col-xs-12 floating-label-form-group controls">
+              <label>RB</label>
+              <input v-model="rb1PlayerId" type="text" class="form-control" placeholder="RB" id="rb1" required data-validation-required-message="Please enter your team's running back.">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="form-group col-xs-12 floating-label-form-group controls">
+              <label>RB</label>
+              <input v-model="rb2PlayerId" type="text" class="form-control" placeholder="RB" id="rb2" required data-validation-required-message="Please enter your team's running back.">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="form-group col-xs-12 floating-label-form-group controls">
+              <label>WR</label>
+              <input v-model="wr1PlayerId" type="text" class="form-control" placeholder="WR" id="wr1" required data-validation-required-message="Please enter your team's wide receiver.">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="form-group col-xs-12 floating-label-form-group controls">
+              <label>WR</label>
+              <input v-model="wr2PlayerId" type="text" class="form-control" placeholder="WR" id="wr2" required data-validation-required-message="Please enter your team's wide receiver.">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="form-group col-xs-12 floating-label-form-group controls">
+              <label>Flex</label>
+              <input v-model="flexPlayerId" type="text" class="form-control" placeholder="Flex" id="flex" required data-validation-required-message="Please enter your team's flex option.">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="form-group col-xs-12 floating-label-form-group controls">
+              <label>TE</label>
+              <input v-model="tePlayerId" type="text" class="form-control" placeholder="TE" id="te" required data-validation-required-message="Please enter your team's tight end.">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+           <div class="control-group">
+            <div class="form-group col-xs-12 floating-label-form-group controls">
+              <label>Kicker</label>
+              <input v-model="kPlayerId" type="text" class="form-control" placeholder="Kicker" id="k" required data-validation-required-message="Please enter your team's Kicker.">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <br>
+          <div id="success"></div>
+          <button class="btn btn-primary" id="sendMessageButton" v-on:click="addUserTeam">Create Team</button>
+        </form> 
   </div>
 </template>
 
