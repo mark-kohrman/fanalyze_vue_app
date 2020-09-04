@@ -84,7 +84,6 @@ export default {
   data: function () {
     return {
       user_teams: [],
-      players: [],
       newUserTeam: "",
       qbPlayerId: "",
       rb1PlayerId: "",

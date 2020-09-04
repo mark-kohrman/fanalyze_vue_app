@@ -22,11 +22,6 @@ const routes = [
     component: Home
   },
   {
-    path: '/signup',
-    name: 'Signup',
-    component: Signup
-  },
-  {
     path: '/user_teams',
     name: 'UserTeamsIndex',
     component: UserTeamsIndex
@@ -45,6 +40,11 @@ const routes = [
     path: '/user_teams/:id/edit',
     name: 'UserTeamsEdit',
     component: UserTeamsEdit
+  },
+  {
+    path: '/signup',
+    name: 'Signup',
+    component: Signup
   },
   {
     path: '/login',
