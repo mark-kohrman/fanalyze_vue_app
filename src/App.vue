@@ -43,7 +43,7 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="site-heading">
-            <h1>Fanalyze</h1>
+             <h1><img class="img-fluid" src="/img/logo.png" alt=""></h1>
             <span class="subheading">A Fantasy Football App By Mark Kohrman</span>
           </div>
         </div>
