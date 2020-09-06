@@ -10,13 +10,6 @@
           </ul>
           <div class="control-group">
             <div class="form-group floating-label-form-group controls">
-              <label>Team Name</label>
-              <input v-model="user_team.user_team_name" type="text" class="form-control" placeholder="Team Name" id="team name" required data-validation-required-message="Please enter your team name.">
-              <p class="help-block text-danger"></p>
-            </div>
-          </div>
-          <div class="control-group">
-            <div class="form-group floating-label-form-group controls">
               <label>QB</label>
               <input v-model="user_team.qb.player_name" type="text" class="form-control" placeholder="QB" id="qb" required data-validation-required-message="Please enter your team's quarterback.">
               <p class="help-block text-danger"></p>
@@ -95,15 +88,14 @@ export default {
     submit: function () {
       console.log("updating team");
       var params = {
-        user_team_name: this.user_team.user_team_name,
-        qb_player_id: this.user_team.qb_player_id,
-        rb1_player_id: this.user_team.rb1_player_id,
-        rb2_player_id: this.user_team.rb2_player_id,
-        wr1_player_id: this.user_team.wr1_player_id,
-        wr2_player_id: this.user_team.wr2_player_id,
-        flex_player_id: this.user_team.flex_player_id,
-        te_player_id: this.user_team.te_player_id,
-        kicker_player_id: this.user_team.kicker_player_id,
+        qb_player_id: this.user_team.qb.player_name,
+        rb1_player_id: this.user_team.rb1.player_name,
+        rb2_player_id: this.user_team.rb2.player_name,
+        wr1_player_id: this.user_team.wr1.player_name,
+        wr2_player_id: this.user_team.wr2.player_name,
+        flex_player_id: this.user_team.flex.player_name,
+        te_player_id: this.user_team.te.player_name,
+        kicker_player_id: this.user_team.k.player_name,
       };
 
       console.log(params);

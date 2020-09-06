@@ -3,7 +3,6 @@
     <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Fanalyze</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         Menu
         <i class="fas fa-bars"></i>
@@ -43,7 +42,7 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="site-heading">
-             <h1><img class="img-fluid" src="/img/logo.png" alt=""></h1>
+             <h1><img class="img-fluid" src="/img/white_fanalyze_logo.png" alt=""></h1>
             <span class="subheading">A Fantasy Football App By Mark Kohrman</span>
           </div>
         </div>
@@ -88,7 +87,7 @@
               </a>
             </li>
           </ul>
-          <p class="copyright text-muted">Copyright &copy; Your Website 2020</p>
+          <p class="copyright text-muted">Copyright &copy; Fanalyze 2020</p>
         </div>
       </div>
     </div>

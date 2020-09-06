@@ -1,5 +1,6 @@
 <template>
   <div class="user_teams_new">
+    <h1>Create Your Dream Team</h1>
     <div class="container">
       <form v-on:submit.prevent="submit()">
         
@@ -10,6 +11,7 @@
               <p class="help-block text-danger"></p>
             </div>
           </div>
+  
           <div class="control-group">
             <div class="form-group floating-label-form-group controls">
               <label>QB</label>
@@ -80,6 +82,9 @@
 <script>
 import Vue2Filters from "vue2-filters";
 import axios from "axios";
+import vSelect from "vue-select";
+import "vue-select/dist/vue-select.css";
+
 export default {
   data: function () {
     return {

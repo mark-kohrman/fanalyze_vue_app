@@ -4,6 +4,10 @@ import router from "./router";
 import axios from "axios";
 import Grid from 'gridjs-vue';
 import Vue2Filters from 'vue2-filters';
+import vSelect from 'vue-select';
+import 'vue-select/dist/vue-select.css';
+
+
 
 
 
@@ -18,6 +22,8 @@ Vue.config.productionTip = false;
 
 Vue.use(Grid);
 Vue.use(Vue2Filters);
+Vue.component('v-select', vSelect);
+
 
 new Vue({
   router,
