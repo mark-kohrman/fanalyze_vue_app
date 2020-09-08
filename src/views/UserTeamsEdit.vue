@@ -4,7 +4,6 @@
       <form v-on:submit.prevent="submit()">
 
         <h1>Edit your team</h1>
-        {{user_team}}
           <ul>
             <li class="text-danger" v-for="error in errors">{{ error }}</li>
           </ul>
